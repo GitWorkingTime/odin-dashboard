@@ -301,3 +301,88 @@ li {
     border-radius: 30px;
     place-items: center;
 }
+
+.page {
+    padding: 10px;
+}
+
+.page .title {
+    font-weight: bold;
+    font-size: 18pt;
+    margin: 10px 0;
+}
+
+.page .page-content .articles .card .title {
+    margin: 0;
+    font-size: 14pt;
+}
+
+.page-content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    font-size: 10pt;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-rows: 50px repeat(3, 220px);
+    gap: 10px;
+    padding: 10px;
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+}
+
+.articles .title {
+    grid-column: 1 / 4;
+}
+
+.articles .card {
+    display: grid;
+    background-color: var(--items);
+    padding: 20px;
+    font-size: 9pt;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px;
+
+    grid-template-rows: 150px 40px;
+}
+
+.card h1,
+.card p {
+    margin: 0;
+}
+
+.card .icons {
+    grid-row-start: 2;
+    justify-self: right;
+}
+
+.announcement {
+    margin-top: 18px;
+}
+
+.announcement .background {
+    background-color: var(--items);
+}
+
+.announcement .container {
+    padding: 20px;
+    background-color: var(--items);
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px;
+    font-size: 10pt;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.announcement .card {
+    padding: 10px 0;
+    border-bottom: 1px var(--background) solid;
+}
+
+.announcement .container > :last-child {
+    border-bottom: none;
+}
