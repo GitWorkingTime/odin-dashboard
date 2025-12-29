@@ -126,6 +126,7 @@ body {
     font-family: 'Source Code Pro', sans-serif;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 img{
@@ -252,7 +253,8 @@ img{
 }
 
 .user-info-small .user-icon,
-.user-info-big .user-icon {
+.user-info-big .user-icon,
+.trending .icon {
     background-color: var(--background);
     padding: 10px;
     border-radius: 60px;
@@ -385,4 +387,22 @@ li {
 
 .announcement .container > :last-child {
     border-bottom: none;
+}
+
+.trending .container {
+    background-color: var(--items);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 1px 1px 5px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.trending .card {
+    display: grid;
+    grid-template-columns: 55px 100px;
+    gap: 10px;
 }
